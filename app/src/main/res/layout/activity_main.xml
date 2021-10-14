@@ -4,48 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/frame1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_frame1"
+        app:layout_constraintBottom_toTopOf="@+id/frame2"
+        app:layout_constraintEnd_toStartOf="@+id/frame3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <FrameLayout
-            android:id="@+id/frame1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/color_frame1">
+    </FrameLayout>
 
-        </FrameLayout>
+    <FrameLayout
+        android:id="@+id/frame2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_frame2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/frame4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame1">
 
-        <FrameLayout
-            android:id="@+id/frame2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/color_frame2">
+    </FrameLayout>
 
-        </FrameLayout>
+    <FrameLayout
+        android:id="@+id/frame3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_frame3"
+        app:layout_constraintBottom_toTopOf="@+id/frame4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/frame1"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <FrameLayout
-            android:id="@+id/frame3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/color_frame3">
+    </FrameLayout>
 
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/frame4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/color_frame4">
-
-        </FrameLayout>
-    </LinearLayout>
-
+    <FrameLayout
+        android:id="@+id/frame4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_frame4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/frame2"
+        app:layout_constraintTop_toBottomOf="@+id/frame3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
